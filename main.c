@@ -6,8 +6,9 @@ int is_whitespace(char c)
 {
 	if (c == ' '  || c == '\t' || c == '\n' || c == '\r' || c == '('  || c == ')' )
 	{	return 1; // 공백글자다.
-		return 0; // 유의미한 글자다.	
+			
 	}
+	return 0; // 유의미한 글자다
 }	
 
 int fget_word(FILE *fp, char *word)
@@ -71,6 +72,7 @@ int fget_word(FILE *fp, char *word)
 
 while(fget_word(fp, word) != 0)
 {
+	printf("%s\n", word);
 	//word processing
 	count_word(word);
 }
